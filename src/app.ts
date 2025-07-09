@@ -5,10 +5,10 @@ import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
 import { sendError } from "./utils";
 // import os from "os";
-import { Redis } from "ioredis";
+// import { Redis } from "ioredis";
 
-const redis = new Redis(process.env.REDIS_URL as string);
-export default redis;
+// const redis = new Redis(process.env.REDIS_URL as string);
+// export default redis;
 
 
 import { RoomManager } from "./StreamManager";
