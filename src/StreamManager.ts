@@ -12,8 +12,8 @@ import { Redis } from "ioredis";
  const redis = new Redis(process.env.REDIS_URL as string);
  export default redis;
 
-const TIME_SPAN_FOR_VOTE = 12; // 20min
-const TIME_SPAN_FOR_QUEUE = 12; // 20min
+const TIME_SPAN_FOR_VOTE = 1200000; // 20min
+const TIME_SPAN_FOR_QUEUE = 1200000; // 20min
 const TIME_SPAN_FOR_REPEAT = 3600000;
 const MAX_QUEUE_LENGTH = 20;
 
@@ -21,7 +21,7 @@ const connection = {
   username: process.env.REDIS_USERNAME || "",
   password: process.env.REDIS_PASSWORD || "",
   host: process.env.REDIS_HOST || "",
-  port: parseInt(process.env.REDIS_PORT || "") || 19465,
+  port: parseInt(process.env.REDIS_PORT || "") || 6379,
 };
 
 // const redisCredentials = {
